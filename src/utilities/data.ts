@@ -24,9 +24,9 @@ export const fetchBudgetForecasts = (): Promise<BudgetForecast[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        { budgetId: 3, percentageSpent: 33 },
         { budgetId: 1, percentageSpent: 55 },
         { budgetId: 2, percentageSpent: 99 },
+        { budgetId: 3, percentageSpent: 33 }, 
       ]);
     }, 2000);
   });

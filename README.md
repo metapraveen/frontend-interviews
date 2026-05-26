@@ -2,25 +2,29 @@
 
 ## Getting Started
 
-Requires Node.js matching `.node-version` (20.14.0).
+This repo is configured as a **CodeSandbox Devbox**. When the sandbox loads:
+
+- The **Vite dev server** boots automatically on **port 3000**. You'll see the running app in the preview pane.
+- **Storybook** also boots automatically on **port 9001**. Open it from the Previews list to inspect the `EventSelector` and `DataTable` stories.
+- Run **Tests** any time from the **Tasks** panel (left rail).
+
+Dependencies are installed on first boot. You do not need to run `npm install` yourself.
+
+### Optional: terminal commands
+
+If you prefer the terminal (or are running locally with Node 20.14.0):
 
 ```bash
-npm install
-npm run dev          # Vite dev server on http://localhost:3000
-npm run storybook    # Storybook on http://localhost:9001
-npm test             # Vitest in watch mode
-npm run test:run     # Vitest one-shot
+npm run dev          # Vite dev server, http://localhost:3000
+npm run storybook    # Storybook, http://localhost:9001
+npm test             # Vitest, watch mode
+npm run test:run     # Vitest, one-shot
 ```
-
-### CodeSandbox
-
-The repo is set up for a CodeSandbox **Devbox**. After importing, the `dev` task starts automatically. Storybook is configured but idle by default, start it from the Tasks panel when needed.
 
 ## Goal
 
-- **Showcase Your Work Structure**: How you organize and structure your code.
-- **Demonstrate Testing Practices**: What types of tests you implement and the aspects of your code you focus on testing.
-- **Commit Message Clarity**: Show how you write commit messages.
+- **Understand the problem well**: Ask all the questions to make the problem clear to you. 
+- **Think out loud about your solution**: Share your approach with us before you start implimenting.
 
 #### Additional Notes
 
@@ -43,7 +47,7 @@ as events like `Purchase` and `purchase` still mean the same thing,
 but we need to be able to differentiate between events with different original names
 to communicate with the intermediate Partners.
 
-## Task
+## Task: EventSelector
 
 Build a component that allows the user (=someone working in our company) to select one of the given [EventKinds](./src/components/EventSelector.tsx) to control what normalized event name we are targeting in our backend.
 
@@ -53,14 +57,31 @@ For the options that represent [EventKinds](./src/components/EventSelector.tsx) 
 
 ![event-selector example](eventinputexample.png)
 
-**Task Submission**: Once you are done, create a PR with your changes to this repo.
+You can see the EventSelector by opening the **Storybook** task and selecting the `EventSelector` story. Try both `Selector` and `SelectorWithOverlappingEvents`.
 
-## Preview
+## Preview (EventSelector)
 
-Before (initial state, before solution is wired up):
+Before, the initial selector state with no overlap handling:
 
 ![before](screenshots/before.png)
 
-After (overlapping `normalizedName` values collapsed into a single option, original names joined with ` | `):
+After, overlapping `normalizedName` values collapsed into a single option with original names joined by ` | `:
 
 ![after](screenshots/after.png)
+
+## Bonus Task: Bug Hunt in DataTable
+
+The `DataTable` component (see [DataTable.tsx](./src/components/DataTable.tsx)) fetches two lists in parallel, a list of budgets and a list of budget forecasts, and renders them together as a single table.
+
+There is a bug in how the two data sources are combined: the forecast value shown on each row does not always belong to the budget on that row.
+
+Your task:
+- Identify the cause of the mismatch.
+- Fix it.
+- Add a one-line note in your submission explaining what was wrong.
+
+You can see the rendered table by opening the **Storybook** task and selecting the `DataTable` story.
+
+
+
+
