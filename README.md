@@ -55,7 +55,7 @@ To get started, refer to the following files: [EventSelector.tsx](./src/componen
 
 For the options that represent [EventKinds](./src/components/EventSelector.tsx) that overlap in their `normalizedName`, ensure that the label displays this overlap to the user. An example of how this could be done is shown below:
 
-![event-selector example](eventinputexample.png)
+![event-selector example](screenshots/eventinputexample.png)
 
 You can see the EventSelector by opening the **Storybook** task and selecting the `EventSelector` story. Try both `Selector` and `SelectorWithOverlappingEvents`.
 
