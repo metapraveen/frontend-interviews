@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "storybook": "storybook dev -p 9001",
+    "storybook": "storybook dev -p 9001 --no-open",
     "build-storybook": "storybook build -o ./build-storybook"
   },
   "dependencies": {
