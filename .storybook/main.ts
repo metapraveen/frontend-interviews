@@ -6,6 +6,13 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
+  viteFinal: async (config) => ({
+    ...config,
+    server: {
+      ...config.server,
+      allowedHosts: [".csb.app"],
+    },
+  }),
 };
 
 export default config;
