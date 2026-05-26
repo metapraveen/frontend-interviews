@@ -17,7 +17,7 @@
     "storybook": {
       "name": "Storybook",
       "command": "npm run storybook",
-      "runAtStart": false,
+      "runAtStart": true,
       "preview": {
         "port": 9001
       }
