@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     ...config,
     server: {
       ...config.server,
-      allowedHosts: [".csb.app"],
+      allowedHosts: true,
     },
   }),
 };
