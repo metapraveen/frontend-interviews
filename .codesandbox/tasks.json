@@ -6,9 +6,9 @@
     }
   ],
   "tasks": {
-    "start": {
-      "name": "CRA dev server",
-      "command": "BROWSER=none HOST=0.0.0.0 WDS_SOCKET_PORT=443 npm start",
+    "dev": {
+      "name": "Vite dev server",
+      "command": "npm run dev",
       "runAtStart": true,
       "preview": {
         "port": 3000
@@ -24,7 +24,7 @@
     },
     "test": {
       "name": "Tests",
-      "command": "npm test -- --watchAll=false"
+      "command": "npm run test:run"
     }
   }
 }

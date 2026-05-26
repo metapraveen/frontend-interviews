@@ -2,13 +2,19 @@
 
 ## Getting Started
 
-To run this task, you need to have [Node.js](https://nodejs.org/en/download/) installed, with the `node --version` declared in [.node-version](.node-version).
+Requires Node.js matching `.node-version` (20.14.0).
 
-- `npm install` to install dependencies.
+```bash
+npm install
+npm run dev          # Vite dev server on http://localhost:3000
+npm run storybook    # Storybook on http://localhost:9001
+npm test             # Vitest in watch mode
+npm run test:run     # Vitest one-shot
+```
 
-- `npm run storybook` to run storybook.
+### CodeSandbox
 
-- `npm run test` to run the tests.
+The repo is set up for a CodeSandbox **Devbox**. After importing, the `dev` task starts automatically. Storybook is configured but idle by default, start it from the Tasks panel when needed.
 
 ## Goal
 

@@ -10,6 +10,15 @@
 
 # production
 /build
+/dist
+/build-storybook
+
+# vite / vitest cache
+.vite
+node_modules/.vite
+
+# storybook cache
+.storybook-cache
 
 # misc
 .DS_Store

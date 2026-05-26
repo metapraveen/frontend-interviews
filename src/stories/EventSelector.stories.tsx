@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import EventSelector, { EventKind } from "../components/EventSelector";
-import { action } from "@storybook/addon-actions";
-
 
 function story(events: EventKind[]) {
   return () => {
-    const [value, setValue] = useState(null as string | null);
-    const onChangeAction = action("onChange");
+    const [value, setValue] = useState<string | null>(null);
 
-    function onChange(value: null | string) {
-      setValue(value);
-      onChangeAction(value);
+    function onChange(next: string | null) {
+      setValue(next);
+      console.log("onChange", next);
     }
 
     return (
       <>
-        <p><button onClick={() => setValue(null)}>Reset Value</button></p>
+        <p>
+          <button onClick={() => setValue(null)}>Reset Value</button>
+        </p>
 
         <EventSelector onChange={onChange} eventKinds={events} value={value} />
       </>
