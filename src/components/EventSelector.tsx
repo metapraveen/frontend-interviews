@@ -18,9 +18,21 @@ type Props = {
 };
 
 function EventSelector(props: Props) {
-  const options = eventSelectOptions(props.eventKinds);
-
-  return <div>TODO: Replace me with a select component</div>;
+  return (
+    <select
+      value={props.value ?? ""}
+      onChange={(event) => {
+        props.onChange(event.target.value);
+      }}
+    >
+      <option value="">Select an event...</option>
+      {props.eventKinds.map((option, index) => (
+        <option key={option.normalizedName+index} value={option.normalizedName}>
+          {option.originalName}
+        </option>
+      ))}
+    </select>
+  );
 }
 
 export default EventSelector;

@@ -54,3 +54,13 @@ For the options that represent [EventKinds](./src/components/EventSelector.tsx) 
 ![event-selector example](eventinputexample.png)
 
 **Task Submission**: Once you are done, create a PR with your changes to this repo.
+
+## Preview
+
+Before (initial state, before solution is wired up):
+
+![before](screenshots/before.png)
+
+After (overlapping `normalizedName` values collapsed into a single option, original names joined with ` | `):
+
+![after](screenshots/after.png)
