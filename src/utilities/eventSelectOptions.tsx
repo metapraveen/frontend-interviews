@@ -10,6 +10,6 @@ export default function eventSelectOptions(
   // in their `originalName` (see `src/stories/EventSelector.stories.tsx`).
   // For the options that represent eventKinds that overlap in their `normalizedName`,
   // the label should show this clearly to the user.
-
+  // eventKinds.
   return [];
 }

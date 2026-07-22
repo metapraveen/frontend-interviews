@@ -18,6 +18,7 @@ type Props = {
 };
 
 function EventSelector(props: Props) {
+
   return (
     <select
       value={props.value ?? ""}

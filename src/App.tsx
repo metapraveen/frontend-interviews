@@ -8,13 +8,14 @@ const events: EventKind[] = [
   { originalName: "install", normalizedName: "install" },
   { originalName: "Install", normalizedName: "install" },
   { originalName: "Install[548325783]", normalizedName: "install" },
+  { originalName: "install", normalizedName: "install" },
 ];
 
 function App() {
   const [value, setValue] = useState<string | null>(null);
 
   return (
-    <div style={{ padding: 24, fontFamily: "system-ui, sans-serif" }}>
+    <div>
       <h1>Event Selector</h1>
       <p>
         Selected: <code>{value ?? "null"}</code>{" "}
